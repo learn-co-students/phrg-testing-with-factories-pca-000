@@ -8,4 +8,13 @@ class Zoo < ActiveRecord::Base
 
   # Must have at least 200 tons of birdfeed
   validates :tonnage_of_birdfeed, numericality: { greater_than_or_equal_to: 200 }
+
+    FactoryBot.define do
+    factory :zoo do
+      location
+      square_footage "1000"
+      tonnage_of_straw 11
+      tonnage_of_birdfeed 200
+    end
+  end
 end
