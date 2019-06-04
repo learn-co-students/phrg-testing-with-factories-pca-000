@@ -5,4 +5,12 @@ class Bear < ActiveRecord::Base
 
   # Zoo only allows brown and black bears
   validates_inclusion_of :color, in: ["brown", "black"]
+
+  FactoryBot.define do
+    factory :bear do
+      weight "really heavy"
+      zoo
+      color "brown"
+    end
+  end
 end
