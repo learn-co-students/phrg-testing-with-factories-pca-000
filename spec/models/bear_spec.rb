@@ -1,5 +1,7 @@
-RSpec.describe Bear do
-  it "has a valid factory" do
-    expect(create(:bear)).to be_valid
+FactoryBot.define do
+  factory :bear do
+    weight "really heavy"
+    zoo
+    color "brown"
   end
 end

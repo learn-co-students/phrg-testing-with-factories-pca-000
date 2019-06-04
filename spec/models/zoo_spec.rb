@@ -1,5 +1,8 @@
-RSpec.describe Zoo do
-  it "has a valid factory" do
-    expect(create(:zoo)).to be_valid
+FactoryBot.define do
+  factory :zoo do
+    location
+    square_footage "1000"
+    tonnage_of_straw 10
+    tonnage_of_birdfeed 200
   end
 end
