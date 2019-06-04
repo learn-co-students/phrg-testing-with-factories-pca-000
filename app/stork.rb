@@ -7,4 +7,13 @@ class Stork < ActiveRecord::Base
   # but nothing too crazy
   validates :bill_length, inclusion: 3..15
   validates :wing_span, inclusion: 10..50
+
+  FactoryBot.define do
+    factory :stork do
+      color "red"
+      zoo
+      bill_length 3
+      wing_span 10
+    end
+  end
 end
