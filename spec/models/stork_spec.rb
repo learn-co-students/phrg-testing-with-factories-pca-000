@@ -1,5 +1,8 @@
-RSpec.describe Stork do
-  it "has a valid factory" do
-    expect(create(:stork)).to be_valid
+FactoryBot.define do
+  factory :stork do
+    color "white"
+    zoo
+    bill_length 3
+    wing_span 10
   end
 end

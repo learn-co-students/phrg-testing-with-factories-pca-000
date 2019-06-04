@@ -1,5 +1,7 @@
-RSpec.describe Tiger do
-  it "has a valid factory" do
-    expect(create(:tiger)).to be_valid
+FactoryBot.define do
+  factory :tiger do
+    weight "heavy"
+    zoo
+    number_of_stripes 100
   end
 end
